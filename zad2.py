@@ -8,9 +8,11 @@ def zad2(list):
 list1 = [1, 2, 3, 4, 5]
 zad2(list1)
 
+
 def zad2_2(list):
     wynik = [i * 2 for i in list]
 
     print(wynik)
+
 
 zad2_2(list1)

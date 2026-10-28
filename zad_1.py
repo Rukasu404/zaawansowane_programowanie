@@ -1,4 +1,5 @@
-class Student():
+class Student:
+
     def __init__(self, name, marks):
         self.name = name
         self.marks = marks
@@ -12,8 +13,9 @@ class Student():
             print("not passed")
             return False
 
-a = Student("s1", [2, 4, 6,6,6])
-b= Student("s2", [1,1,1,1,2,3])
+
+a = Student("s1", [2, 4, 6, 6, 6])
+b = Student("s2", [1, 1, 1, 1, 2, 3])
 
 is_passed = a.is_passed()
 is_not_passed = b.is_passed()

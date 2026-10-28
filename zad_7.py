@@ -10,7 +10,8 @@ BREWERIES_LIMIT = 20
 
 
 def _to_float(value: Any) -> Optional[float]:
-    """Zamienia wartość z API (zwykle string) na float; None jeśli brak/niepoprawna."""
+    """Zamienia wartość z API (zwykle string) na float;
+    None jeśli brak/niepoprawna."""
     if value is None:
         return None
     try:
@@ -90,7 +91,8 @@ class Brewery:
 
 
 def fetch_breweries(limit: int = BREWERIES_LIMIT) -> list[Brewery]:
-    """Pobiera `limit` pierwszych browarów z API i zwraca listę obiektów Brewery."""
+    """Pobiera `limit` pierwszych browarów z API
+    i zwraca listę obiektów Brewery."""
     response = requests.get(API_URL, params={"per_page": limit}, timeout=10)
     response.raise_for_status()
     return [Brewery.from_dict(item) for item in response.json()[:limit]]

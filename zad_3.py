@@ -7,10 +7,11 @@ def zad3(a):
 
     return parzysta
 
+
 liczba = 1
 czy_parzysta = zad3(liczba)
 
-if czy_parzysta == True:
+if czy_parzysta is True:
     print("liczba parzysta")
 else:
     print("liczba nieparzysta")

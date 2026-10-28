@@ -8,5 +8,6 @@ def zad_5(list, a):
     print(wynik)
     return wynik
 
-list=[5,6,2,1,6,4,8]
+
+list = [5, 6, 2, 1, 6, 4, 8]
 zad_5(list, 0)

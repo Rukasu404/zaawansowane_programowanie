@@ -11,7 +11,8 @@ BREWERIES_LIMIT = 20
 
 
 def _to_float(value: Any) -> Optional[float]:
-    """Zamienia wartość z API (zwykle string) na float; None jeśli brak/niepoprawna."""
+    """Zamienia wartość z API (zwykle string) na float;
+    None jeśli brak/niepoprawna."""
     if value is None:
         return None
     try:
@@ -93,9 +94,11 @@ class Brewery:
 def fetch_breweries(
     limit: int = BREWERIES_LIMIT, city: Optional[str] = None
 ) -> list[Brewery]:
-    """Pobiera `limit` pierwszych browarów z API i zwraca listę obiektów Brewery.
+    """Pobiera `limit` pierwszych browarów z API
+    i zwraca listę obiektów Brewery.
 
-    Jeśli podano `city`, wyniki są ograniczone do wskazanego miasta.
+    Jeśli podano `city`, wyniki są
+    ograniczone do wskazanego miasta.
     """
     params: dict[str, Any] = {"per_page": limit}
     if city:
@@ -110,7 +113,8 @@ def fetch_breweries(
 def parse_args() -> argparse.Namespace:
     """Wczytuje parametry przekazane w wierszu poleceń."""
     parser = argparse.ArgumentParser(
-        description="Pobiera browary z Open Brewery DB i wyświetla je w konsoli."
+        description="Pobiera browary z Open Brewery "
+                    "DB i wyświetla je w konsoli."
     )
     parser.add_argument(
         "--city",
@@ -142,5 +146,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-### python main.py --city=Berlin  przykladowo """
